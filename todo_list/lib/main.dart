@@ -12,13 +12,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'My First App',
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('first app'),
-          backgroundColor: const Color.fromARGB(255, 44, 18, 48),
-        ),
+        backgroundColor: Colors.yellow,
         body: Center(
-          child: Text('Welocom', style: TextStyle(fontSize: 24),),
+          child: Container(
+              height: 300,
+              width: 300,
+              color: const Color.fromARGB(255, 8, 106, 186),
+              
+            ),
         ),
+        
       ),
       );
   }
