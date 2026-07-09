@@ -32,7 +32,9 @@ class _TodoPageState extends State<TodoPage> {
             TextField(
               controller: myController,
               decoration: InputDecoration(
-                border: OutlineInputBorder(),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20)               ),
+                
                 hintText: "just write the letters"
               ),
             ),
