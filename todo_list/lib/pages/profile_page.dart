@@ -10,7 +10,21 @@ class ProfilePage extends StatelessWidget {
     appBar: AppBar(title: Text('MyPage')),
 
     body: Center(
-      child: Text("profile page"),
+      child: Container(
+        height: 300,
+        width: 300,
+        color: Colors.yellow,
+        child: Center(
+          child: Text(
+            "Profile page",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 32,
+                
+            ),
+          ),
+        ),
+      ),
     )
     );
   }

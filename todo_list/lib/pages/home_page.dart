@@ -10,8 +10,23 @@ class HomePage extends StatelessWidget {
     appBar: AppBar(title: Text('MyPage')),
 
     body: Center(
-      child: Text("Home page"),
+      child: Container(
+        height: 300,
+        width: 300,
+        color: Colors.yellow,
+        child: Center(
+          child: Text(
+            "Home page",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 32,
+                
+            ),
+          ),
+        ),
+      ),
     )
+
     );
   }
 }

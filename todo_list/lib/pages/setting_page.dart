@@ -10,7 +10,21 @@ class SettingPage extends StatelessWidget {
     appBar: AppBar(title: Text('MyPage')),
 
     body: Center(
-      child: Text("setting page"),
+      child: Container(
+        height: 300,
+        width: 300,
+        color: Colors.yellow,
+        child: Center(
+          child: Text(
+            "Setting page",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 32,
+                
+            ),
+          ),
+        ),
+      ),
     )
     );
   }
