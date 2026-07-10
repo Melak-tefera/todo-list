@@ -11,6 +11,7 @@ const HomePage({super.key});
 
 class _HomePageState extends State<HomePage> {
 
+  final controller=TextEditingController();
   List toDolist=[
     ["take shower", true],
     ["go to school", false],
@@ -23,13 +24,30 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
+  void savenewtask(){
+    setState(() {
+      toDolist.add([controller.text, false]);
+      controller.clear();
+    });
+    Navigator.of(context).pop();
+  }
+
   void createNewTask(){
     showDialog(
       context: context, 
       builder: (context){
-        return DialogBox();
+        return DialogBox(
+          controller: controller,
+          onsave: savenewtask,
+          oncancel: () => Navigator.of(context).pop(),
+        );
       }
       );
+  }
+  void deletetask(int index){
+    setState(() {
+      toDolist.removeAt(index);
+    });
   }
 
   @override
@@ -49,8 +67,9 @@ class _HomePageState extends State<HomePage> {
         itemBuilder: (context, index) {
           return TodoTile(
             taskName: toDolist[index][0],
-             taskCompleted: toDolist[index][1],
-              onChanged: (value) => checkBoxChecked(value, index),
+            taskCompleted: toDolist[index][1],
+            onChanged: (value) => checkBoxChecked(value, index),
+            deleteFunction:(context)=>deletetask(index),
               );
         },
       ),
