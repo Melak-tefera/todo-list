@@ -73,6 +73,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: Center(child: Text("TO DO")),
         elevation: 0,
+        backgroundColor: Colors.yellow,
   
       ),
       floatingActionButton: FloatingActionButton(child: Icon(Icons.add), onPressed:createNewTask),
