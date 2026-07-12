@@ -12,7 +12,7 @@ DialogBox({super.key, required this.controller, required this.onsave, required t
 
     return  AlertDialog(
       backgroundColor: Colors.yellow[300],
-      content: Container(
+      content: SizedBox(
         height: 120,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
